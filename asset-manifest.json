@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/online-tools-react/static/css/main.cb669b7f.chunk.css",
+    "main.js": "/online-tools-react/static/js/main.fd82852f.chunk.js",
+    "main.js.map": "/online-tools-react/static/js/main.fd82852f.chunk.js.map",
+    "runtime-main.js": "/online-tools-react/static/js/runtime-main.e8587c89.js",
+    "runtime-main.js.map": "/online-tools-react/static/js/runtime-main.e8587c89.js.map",
+    "static/css/2.a63ca25f.chunk.css": "/online-tools-react/static/css/2.a63ca25f.chunk.css",
+    "static/js/2.c50a7c61.chunk.js": "/online-tools-react/static/js/2.c50a7c61.chunk.js",
+    "static/js/2.c50a7c61.chunk.js.map": "/online-tools-react/static/js/2.c50a7c61.chunk.js.map",
+    "index.html": "/online-tools-react/index.html",
+    "precache-manifest.7b1a34b8bd3c01f7e8e7b387d296548a.js": "/online-tools-react/precache-manifest.7b1a34b8bd3c01f7e8e7b387d296548a.js",
+    "service-worker.js": "/online-tools-react/service-worker.js",
+    "static/css/2.a63ca25f.chunk.css.map": "/online-tools-react/static/css/2.a63ca25f.chunk.css.map",
+    "static/css/main.cb669b7f.chunk.css.map": "/online-tools-react/static/css/main.cb669b7f.chunk.css.map",
+    "static/js/2.c50a7c61.chunk.js.LICENSE.txt": "/online-tools-react/static/js/2.c50a7c61.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/online-tools-react/static/media/logo.bf09acc3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8587c89.js",
+    "static/css/2.a63ca25f.chunk.css",
+    "static/js/2.c50a7c61.chunk.js",
+    "static/css/main.cb669b7f.chunk.css",
+    "static/js/main.fd82852f.chunk.js"
+  ]
+}
