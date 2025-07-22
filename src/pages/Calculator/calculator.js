@@ -39,20 +39,39 @@ class Calculator extends Component {
                     case '/':
                         result = parseFloat(firstOperand) / parseFloat(currentInput);
                         break;
+                    case '±':
+                    case '%':
+                    case '√':
                     default:
                         result = currentInput;
                 }
                 this.setState({ display: result.toString(), currentInput: result.toString(), operator: null, firstOperand: null });
             }
         } else if (value === '±') {
-            this.setState({ currentInput: (parseFloat(currentInput) * -1).toString(), operator: '±', firstOperand: currentInput });
+            this.setState({
+                display: (currentInput.isNaN || currentInput.length === 0) ? value : display + value,
+                currentInput: (parseFloat(currentInput) * -1).toString(),
+                operator: '±',
+                firstOperand: currentInput
+            });
         } else if (value === '%') {
-            this.setState({ currentInput: (parseFloat(currentInput) / 100).toString(), operator: '%', firstOperand: currentInput });
+            this.setState({
+                display: (currentInput.isNaN || currentInput.length === 0) ? value : display + value,
+                currentInput: (parseFloat(currentInput) / 100).toString(),
+                operator: '%',
+                firstOperand: currentInput
+            });
         } else if (value === '√') {
-            this.setState({ currentInput: Math.sqrt(parseFloat(currentInput)).toString(), operator: '√', firstOperand: currentInput });
+            console.log(currentInput)
+            this.setState({
+                display: (currentInput.isNaN || currentInput.length === 0) ? value : display + value,
+                currentInput: Math.sqrt(parseFloat(currentInput)).toString(),
+                operator: '√',
+                firstOperand: currentInput
+            });
         } else if (['+', '-', '*', '/'].includes(value)) {
             if (firstOperand === null) {
-                this.setState({ firstOperand: currentInput, operator: value, currentInput: '' });
+                this.setState({ display: display + value, firstOperand: currentInput, operator: value, currentInput: '' });
             } else {
                 let result;
                 switch (operator) {
@@ -71,7 +90,7 @@ class Calculator extends Component {
                     default:
                         result = currentInput;
                 }
-                this.setState({ firstOperand: result.toString(), operator: value, currentInput: '' });
+                this.setState({ display: display + value, firstOperand: result.toString(), operator: value, currentInput: '' });
             }
         } else {
             if (display === '0') {
